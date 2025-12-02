@@ -220,3 +220,14 @@ Bibliography
 11
 this is my final year project 
 you have to do code and tell me how to make files abd don code
+
+## Backend quickstart (local)
+
+1. Ensure Python 3.12+ is available (`python3 --version`).
+2. Install dependencies (adds binaries to `~/.local/bin`):
+   - `pip3 install --user -r backend/requirements.txt`
+   - `export PATH="$HOME/.local/bin:$PATH"`
+3. Run the FastAPI service from the repo root:
+   - `PYTHONPATH=backend uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload`
+4. Verify the health endpoint in a browser or with curl:
+   - `curl http://127.0.0.1:8000/api/health`
